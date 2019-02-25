@@ -18,3 +18,22 @@ tags = {
   }
 
 }
+
+resource "aws_security_group" "allow_tls" {
+name = "Allow traffiq for Jenkins Server"
+description = "Security group for Jenkins Cluster"
+vpc_id = "${aws_vpc.main.id}"
+
+egress{
+from_port       = 0
+to_port         = 0
+protocol        = "-1"
+}
+
+
+egress{
+from_port = 443
+to_port = 443
+protocol = -1
+}
+}
