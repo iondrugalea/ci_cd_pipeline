@@ -27,19 +27,21 @@ vpc_id = "${aws_vpc.main.id}"
 egress{
 from_port       = 0
 to_port         = 0
+cidr_blocks     = "${var.OUTBOUND_CIDR_BLOCK}"
 protocol        = "-1"
 }
 
 
-egress{
+ingress {
 from_port = 443
 to_port = 443
-protocol = -1
+cidr_blocks = "${var.ING_CIDR_BLOCK}"
+protocol = "tcp"
 }
-}
-egress{
+ingress {
 from_port = 22
 to_port = 22
-protocol = -1
+cidr_blocks = "${var.ING_CIDR_BLOCK}"
+protocol = "tcp"
 }
 }
