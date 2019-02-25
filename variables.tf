@@ -4,4 +4,4 @@ variable "PROJECT_NAME" {}
 variable "VPC_CIDR_BLOCK" {}
 #Public Subnet
 
-varibale "PUB_SUBNET"{}
+variable "PUB_SUBNET"{}
