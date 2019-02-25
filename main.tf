@@ -1,1 +1,9 @@
-#Jenkins Cluster aufbau aus drei EC2 Instanzen
+
+resource "aws_vpc" "main"{
+ cidr_block = "10.0.0.0/22"
+ enable_dns_support = "true"
+ enable_dns_hostnames = "true"
+ tags ={
+  Name = "Jenkins-VPC"
+}
+}
