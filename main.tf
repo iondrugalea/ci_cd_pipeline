@@ -37,3 +37,9 @@ to_port = 443
 protocol = -1
 }
 }
+egress{
+from_port = 22
+to_port = 22
+protocol = -1
+}
+}
