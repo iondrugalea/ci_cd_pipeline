@@ -10,13 +10,10 @@
 "profile" : "default",
 "region" : "{{user `region`}}",
 "instance_type" : "t2.micro",
-"force_deregister": "true",
-"force_delete_snapshot": "true",
-
 "source_ami" : "{{user `source_ami`}}",
 "ssh_username" : "ec2-user",
-"ami_name" : "jenkins-master",
-"ami_description" : "Amazon Linux Instance for Jenkins Master",
+"ami_name" : "jenkins-slave",
+"ami_description" : "Amazon Linux Instance for Jenkins Slave",
 "run_tags" : {
 "Name": "packer-builder-docker"
 },
@@ -34,7 +31,7 @@
         },
         {
             "type" : "shell",
-            "script" : "./jenkins-master-setup.sh",
+            "script" : "./jenkins-slave-setup.sh",
             "execute_command" : "sudo -E -S sh '{{ .Path }}'"
         }
     ]
