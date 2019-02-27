@@ -4,12 +4,12 @@ variable "region"{
 default = "eu-central-1"
 }
 variable "access_key"{
-default = "AKIAIJ2QQS53R5CAEBMQ"
+default = ""
 }
 
 variable "secret_key" {
 
-default = "9fdz1dDCf1unysLJKAd7Q8NiJdhnKZb1HqLgBc4p"
+default = ""
 }
 
 #Alle globale Variablen fuer Terraform
