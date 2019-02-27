@@ -1,3 +1,17 @@
+#AWS Credentials
+
+variable "region"{
+default = "eu-central-1"
+}
+variable "access_key"{
+default = "AKIAIJ2QQS53R5CAEBMQ"
+}
+
+variable "secret_key" {
+
+default = "9fdz1dDCf1unysLJKAd7Q8NiJdhnKZb1HqLgBc4p"
+}
+
 #Alle globale Variablen fuer Terraform
 variable "PROJECT_NAME" {
 default = "Jenkins CI/CD"}
@@ -17,4 +31,9 @@ variable "ING_CIDR_BLOCK" {
 variable "OUTBOUND_CIDR_BLOCK" {
          type = "list"
         default = [ "0.0.0.0/0" ]
+}
+
+variable "key_name"{
+
+default = "aws_key_iondrugalea"
 }

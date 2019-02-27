@@ -1,0 +1,20 @@
+resource "aws_instance" "jenkins-master" {
+ami = "${data.aws_ami.jenkins-master.id}"
+instance_type = "t2.micro"
+key_name  = "${var.key_name}"
+vpc_id = "${data.aws_vpc.main.id}"
+subnet_id = "${aws_subnet.pub_subnet.id}"
+
+root_block_device{
+volume_type = "gp2"
+volume_size = "30"
+delete_on_termination = false
+
+}
+tags{
+Name = "Jenkins-Master"
+Author = "Ion Drugalea"
+Tool = "Terraform"
+}
+
+}
