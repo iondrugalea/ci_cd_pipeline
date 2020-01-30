@@ -1,8 +1,9 @@
 provider  "aws"{
 region = "eu-central-1"
-access_key = ""
-secret_key = ""
+access_key = "your aws access_key"
+secret_key = "your aws secret_key"
 vpc_id = "${aws_vpc.main.id}"
+#
 
 }
 
