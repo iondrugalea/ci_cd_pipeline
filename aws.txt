@@ -3,6 +3,6 @@ region = "eu-central-1"
 access_key = ""
 secret_key = ""
 vpc_id = "${aws_vpc.main.id}"
-subnet_id = 
+
 }
 
